@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+   
+    <body>
+        <input id="horas" placeholder="Numero de horas">
+        <input id="minutos" placeholder="Numero de minutos">
+        <button onclick="calcular()" class="calcular" id="calcular">Calcular</button>
+         <script type="text/javascript">
+             function calcular(){
+                 var precio = 0;
+                 var cantidadhoras = parseInt(document.getElementById("horas").value);
+                 var cantidadminutos = parseInt(document.getElementById("minutos").value);
+                 if((cantidadhoras>0) && (cantidadminutos>0)){
+                     precio = (cantidadhoras * 2.5)+2.5;
+                 }else if ((cantidadhoras>0) && (cantidadminutos==0)){
+                     precio = (cantidadhoras * 2.5);
+             }
+                 alert("Total a pagar son "+precio+" dolares.");
+             }
+    </script>
+    </body>
+</html>

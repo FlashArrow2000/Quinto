@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+    <body>
+        <p>Introduza la cantidad de kilometros recorridos</p>
+        <input id="kilometros" placeholder="Digiteslos aqui">
+        <button onclick="calcular()" class="calcular" id="calcular">Calcular</button>
+         <script type="text/javascript">
+             function calcular(){
+                 var kilometros = parseInt(document.getElementById("kilometros").value);
+                 var impuesto = 0;
+                 var preciofinal = 0;
+                 var kilometrosadicionales = 0;
+                 if(kilometros<=300){
+                     impuesto=30*0.18;
+                     preciofinal=30+impuesto;
+                     document.write("Su monto a pagar es de: "+preciofinal+" dolares.");
+                 }else if((kilometros>300)&&(kilometros<800)){
+                     kilometrosadicionales=(kilometros-300)*0.10;
+                     preciofinal= (kilometros+kilometrosadicionales)*0.18;
+                     document.write("El monto a pagar es de: "+preciofinal);
+                 }
+             }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+   
+    <body>
+        <p>Digite cuantas camisas desea comprar</p>
+        <p>Recuerde que, si se compran entre 1 a 4 camisas se aplica un descuento del 12.5%, si se compra una cantidad comprendida entre 5 y 8 camisas se aplica un descuento del 20% y si se compran cantidades mayores, se aplica un descuento del 31.5% sobre el total de la compra.</p>
+        <p>Precio por camisa: 2000 colones</p>
+        <input id="camisas" placeholder="Aqui la cantidad de camisas">
+        <button onclick="comprar()" class="comprar" id="caomprar">Comprar</button>
+         <script type="text/javascript">
+             function comprar(){
+                 var cantidaddecamisas = parseInt(document.getElementById("camisas").value);
+                 var preciodecamisassindescuento = 0;
+                 var preciodecamisascondescuento = 0;
+                 var montodedescuento = 0;
+                 if((cantidaddecamisas>=1)&&(cantidaddecamisas<=4)){
+                     var preciodecamisassindescuento = cantidaddecamisas*2000;
+                     var montodedescuento = preciodecamisassindescuento*0.125;
+                     var preciodecamisascondescuento = preciodecamisassindescuento - montodedescuento;
+                 } else if((cantidaddecamisas>=5)&&(cantidaddecamisas<=8)){
+                     var preciodecamisassindescuento = cantidaddecamisas*2000;
+                     var montodedescuento = preciodecamisassindescuento*0.20;
+                     var preciodecamisascondescuento = preciodecamisassindescuento - montodedescuento;
+                 }else if(cantidaddecamisas>8){
+                     var preciodecamisassindescuento = cantidaddecamisas*2000;
+                     var montodedescuento = preciodecamisassindescuento*0.315   ;
+                     var preciodecamisascondescuento = preciodecamisassindescuento - montodedescuento;
+                 }
+                 alert("Precio de camisas sin descuento: "+preciodecamisassindescuento+"\nPrecio de camisas con descuento: "+preciodecamisascondescuento+"\nMonto del descuento: "+montodedescuento);
+             }
+         </script>
+    </body>
+</html>

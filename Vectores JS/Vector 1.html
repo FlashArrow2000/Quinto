@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title> Javascript </title>
+				<script type="text/javascript">
+                    var vec=new Array(10);
+                    var ma = 0;
+                    for(i=0;i<vec.length;i++){
+                        vec[i]=(numerosdelvector());
+                        
+                    }
+                    for(i=1;i<=vec.length;i++){
+		                  for(j=0;j<vec.lenght;j++){
+                              if(vec[j]>vec[i]){
+                            ma = vec[j];
+                            vec[j]=vec[i];
+                            vec[i]=ma;
+                              }
+                          }
+                    }
+                     for(i=0;i<vec.length;i++){
+                      document.write(vec[i]);
+                     }
+                    function numerosdelvector(){
+                        numerosaleatorios=Math.round(Math.random()*(10-1)+1);
+                        return numerosaleatorios;
+                    }
+				</script>
+	</head>
+	<body>
+	</body>
+</html>

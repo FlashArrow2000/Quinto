@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+   
+    <body>
+        <p>Determinar si un numero es capicua</p>
+        <input id="numero" placeholder="Digite un numero de 3 cifras">
+        <button onclick="calcular()" class="calcular" id="calcular">Calcular</button>
+         <script type="text/javascript">
+             function calcular(){
+                 var numero = parseInt(document.getElementById("numero").value);
+                 var primernumero = numero%10;
+                 var operacion1 = numero/10;
+                 var resultado = operacion1.toFixed()+primernumero;
+                 if (resultado==numero){
+                     alert("El numero es capicua")
+                 } else alert("El numero no es capicua");
+             }
+    </script>
+    </body>
+</html>

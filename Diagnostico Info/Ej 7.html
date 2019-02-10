@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+   
+    <body>
+        <p>Calificacion segun cuantos numeros 6 tengas</p>
+                <br>
+        <p>Tres 6 = Excelente</p>
+                <br>
+        <p>Dos 6 = Muy Bien</p>
+                <br>
+        <p>Un 6 = Regular</p>
+                <br>
+        <p>Cero 6 = Pesimo</p>
+                <br>
+        <button onclick="calcular()" class="calcular" id="calcular">Tirar dados</button>
+         <script type="text/javascript">
+             function calcular(){
+                 num1=Math.round(Math.random()*(6-1)+1);
+                 num2=Math.round(Math.random()*(6-1)+1);
+                 num3=Math.round(Math.random()*(6-1)+1);
+                 document.write(num1+"  ");
+                 document.write(num2+"  ");
+                 document.write(num3);
+                 if(num1==6 && num2==6 && num3==6){
+                    document.write("  Tienes mucha suerte! Tu puntuacion es excelente!");
+                 } else if((num1 && num2==6)||(num2 && num3==6)||(num1 && num3==6)){
+                     document.write("  Que buena suerte! Tu puntuacion es muy buena!")
+                 } else if((num1==6)&&(num2!=6)&&(num3!=6)||(num2==6)&&(num3!=6)&&(num1!=6)||(num3==6)&&(num2!=6)&&(num1!=6)){
+                     document.write("  Suerte Regular! Tu puntuacion es regular!")
+                 } else if((num1!=6)&&(num2!=6)&&(num3!=6)||(num2!=6)&&(num3!=6)&&(num1!=6)||(num3!=6)&&(num2!=6)&&(num1!=6)){
+                     document.write("  Suerte Pesima! Tu puntuacion es pesia!")
+             }
+             }
+    </script>
+    </body>
+</html>

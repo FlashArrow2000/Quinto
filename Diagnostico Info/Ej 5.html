@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+   
+    <body>
+        <p>Valor por docena 6000 colones</p>
+        <input id="numero" placeholder="Digite el numero de docenas">
+        <button onclick="calcular()" class="calcular" id="calcular">Calcular</button>
+         <script type="text/javascript">
+             function calcular(){
+                 var numero = parseInt(document.getElementById("numero").value);
+                 var unidadesregaladas = 0;
+                 var unidadescompradastotal = 0;
+                 var descuento = 0;
+                 var totalsindescuento = 0;
+                 var totalcondescuento = 0;
+                 
+                 if (numero>0){
+                     unidadescompradastotal = numero*12;
+                 } else alert("Digite un numero");
+                 if(numero>=3){
+                    unidadesregaladas = numero-2;
+                    totalsindescuento = numero * 6000;
+                    descuento = totalsindescuento * 0.15;
+                    totalcondescuento = totalsindescuento-descuento;
+             } else descuento = totalsindescuento * 0.10;
+                    totalcondescuento = totalsindescuento-descuento;
+                 document.write("Monto de la compra :"+totalsindescuento);
+                 document.write("\nMonto del descuento :"+descuento);
+                 document.write("\nMonto a pagar :"+totalcondescuento);
+                 document.write("\nNumero de unidades regaladas :"+unidadesregaladas);
+                 
+             }
+    </script>
+    </body>
+</html>
