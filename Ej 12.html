@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+   
+    <body>
+        <p>Digite la cantidad de tornillos defectuosos</p>
+        <input id="defectuosos" placeholder="Ej: 200">
+        <p>Digite la cantidad de tornillos producidos</p>
+        <input id="producidos" placeholder="Ej: 1000">
+        <button onclick="calcular()" class="calcular" id="calcular">Calcular</button>
+         <script type="text/javascript">
+             function calcular(){ //Variables para calcular
+                 var defectuosos = parseInt(document.getElementById("defectuosos").value);
+                 var producidos = parseInt(document.getElementById("producidos").value);
+                 //Calificar grado 5
+                     if((defectuosos>200)&&(producidos<1000)){
+                         document.write("La eficiencia del operario es malo, su grado es el 5º");
+                         //Calificar grado 6
+                     }else if((defectuosos<200)&&(producidos<1000)){
+                         document.write("La eficiencia del operario es regular, su grado es el 6º");
+                         //calificar grado 7
+                 }else if((defectuosos>200)&&(producidos>1000)){
+                         document.write("La eficiencia del operario es bueno, su grado es el 7º");
+                     //calificar grado 8
+            }else if((defectuosos<200)&&(producidos>1000)){
+                         document.write("La eficiencia del operario es muy bueno, su grado es el 8º");
+                 }
+             }
+    </script>
+    </body>
+</html>

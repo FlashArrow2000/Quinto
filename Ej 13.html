@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+   
+    <body>
+        <p>Digite la cantidad de votos para cada aspirante</p>
+        <input id="juan" placeholder="Aqui los de Juan">
+        <input id="pedro" placeholder="Aqui los de Pedro">
+        <input id="maria" placeholder="Aqui los de Maria">
+        <button onclick="calcular()" class="calcular" id="calcular">Calcular</button>
+         <script type="text/javascript">
+             function calcular(){
+                 //declaracion de variables
+                 var juan = parseInt(document.getElementById("juan").value);
+                 var pedro = parseInt(document.getElementById("pedro").value);
+                 var maria = parseInt(document.getElementById("maria").value);
+                 if((juan==pedro)&&(pedro==maria)){
+                     document.write("Segunda Eleccion");
+                     document.write("<input id='juan' placeholder='Aqui los de Juan'>");
+                     document.write("<input id='pedro' placeholder='Aqui los de Pedro'>");
+                     document.write("<input id='maria' placeholder='Aqui los de Maria'>");
+                     document.write("<button onclick='calcular()' class='calcular' id='calcular'>Calcular</button>");
+                     var juan = parseInt(document.getElementById("juan").value);
+                     var pedro = parseInt(document.getElementById("pedro").value);
+                     var maria = parseInt(document.getElementById("maria").value);
+                     if((juan==pedro)&&(pedro==maria)){
+                        alert("Las elecciones quedan anuladas por haber un triple empate");
+                     }
+                 }else if(((juan>((0.5*juan)+1)))&&(((pedro<((0.5*pedro)+1))))&&(((maria<((0.5*maria)+1))))){
+                     document.write("El ganador es Juan");
+                 }else if(((juan<((0.5*juan)+1)))&&(((pedro>((0.5*pedro)+1))))&&(((maria<((0.5*maria)+1))))){
+                     document.write("El ganador es Pedro");
+                 }else if(((juan<((0.5*juan)+1)))&&(((pedro<((0.5*pedro)+1))))&&(((maria>((0.5*maria)+1))))){
+                     document.write("El ganador es Maria");
+                 }
+             }  
+    </script>
+    </body>
+</html>
